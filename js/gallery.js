@@ -109,11 +109,11 @@ window.addEventListener('load', function() {
 
 }, false);
 
-function  iterateJSON(){
-  for(x = 0; x < mJson; x ++)
+function iterateJSON() {
+  for(x = 0; x < mJson.images.length; x++)
   {
     mImages[x] = new GalleryImage();
-    mImages[x].location = mJson.images[x].imageLocation;
+    mImages[x].location = mJson.images[x].imgLocation;
     mImages[x].description = mJson.images[x].description;
     mImages[x].date = mJson.images[x].date;
     mImages[x].img = mJson.images[x].imgPath;
