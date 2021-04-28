@@ -121,7 +121,7 @@ function  iterateJSON(){
 }
 
 function GalleryImage() {
-  var location =
+  var location; 
   var description;
   var date;
   var img;
