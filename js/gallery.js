@@ -43,7 +43,7 @@ function swapPhoto() {
      mCurrentIndex = mImages.length-1;
    }
 
-    document.getElementById('photo').src = mImages [mCurrentIndex].img;
+    document.getElementById('photo').src = mImages[mCurrentIndex].img;
 
     var location = document.getElementsByClassName('location')[0];
     location.innerHTML = "Location: " + mImages[mCurrentIndex].location;
@@ -73,7 +73,7 @@ var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = '../images.json';
+var mUrl = 'images.json';
 
 function fetchJSON(){
 mRequest.onreadystatechange = function() {
