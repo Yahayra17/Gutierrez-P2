@@ -34,29 +34,29 @@ function animate() {
 
 function swapPhoto() {
 
-  if (mCurrentIndex >= mImages.length)
+  if(mCurrentIndex >= mImages.length)
   {
     mCurrentIndex = 0;
   }
 
-   if (mCurrentIndex < 0 ){
-     mCurrentIndex = mImages.length-1;
-   }
+  if(mCurrentIndex < 0) {
+    mCurrentIndex = mImages.length-1;
+  }
 
-    document.getElementById('photo').src = mImages[mCurrentIndex].img;
+  document.getElementById('photo').src = mImages[mCurrentIndex].img;
 
-    var location = document.getElementsByClassName('location')[0];
-    location.innerHTML = "Location: " + mImages[mCurrentIndex].location;
+  var location = document.getElementsByClassName('location')[0];
+  location.innerHTML = "Location: " + mImages[mCurrentIndex].location;
 
-    var decription = document.getElementsByClassName9('description')[0];
-    description.innerHTML = "Description: "  + mImages[mCurrentIndex].description;
+  var description = document.getElementsByClassName('description')[0];
+  description.innerHTML = "Description: " + mImages[mCurrentIndex].description;
 
-    var date = document.getElementsByClassName('date')[0];
-    date.innerHTML = "Date: " + mImages[mCurrentIndex].date;
+  var date = document.getElementsByClassName('date')[0];
+  date.innerHTML = "Date: " + mImages[mCurrentIndex].date;
 
-	   mLastFrameTime = 0
-     mCurrentIndex += 1
-      console.log('swap photo');
+  mLastFrameTime = 0;
+  mCurrentIndex += 1;
+	console.log('swap photo');
 }
 
 // Counter for the mImages array
@@ -75,12 +75,12 @@ var mJson;
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
 var mUrl = 'images.json';
 
-function fetchJSON(){
-mRequest.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-       mJson =  JSON.parse(mRequest.responseText);
-       iterateJSON();
-    }
+function fetchJSON() {
+  mRequest.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+         mJson = JSON.parse(mRequest.responseText);
+         iterateJSON();
+      }
   };
   mRequest.open("GET", mUrl, true);
   mRequest.send();
@@ -99,7 +99,7 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 $(document).ready( function() {
   fetchJSON();
 	// This initially hides the photos' metadata information
- //	$('.details').eq(0).hide();
+	// $('.details').eq(0).hide();
 
 });
 
@@ -121,8 +121,8 @@ function iterateJSON() {
 }
 
 function GalleryImage() {
-  var location; 
-  var description;
-  var date;
+	var location;
+	var description;
+	var date;
   var img;
 }
