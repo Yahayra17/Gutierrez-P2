@@ -34,7 +34,7 @@ function animate() {
 
 function swapPhoto() {
 
-  if (mCurrentIndex >= mimage.lenth)
+  if (mCurrentIndex >= mImage.length)
   {
     mCurrentIndex = 0;
   }
