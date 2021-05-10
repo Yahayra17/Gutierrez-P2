@@ -30,9 +30,8 @@ body {
 	position: absolute;
 	z-index: 3;
 	opacity: .8;
-	top: 0px;
-	margin: auto;
-	position: absolute;
+	bottom: 0px;
+	right: 45%;
 }
 
 .thumbnail {
@@ -44,6 +43,10 @@ body {
 .banner {
 	text-align: center;
 	font-size: 1.25em;
+}
+
+#photo {
+	width: 100%;
 }
 
 #nav {
