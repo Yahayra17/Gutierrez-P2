@@ -61,7 +61,7 @@ function swapPhoto() {
      mCurrentIndex = mImages.length-1;
    }
 
-    document.getElementById('photo').src = mImages [mCurrentIndex].img;
+    document.getElementById('photo').src = mImages[mCurrentIndex].img;
 
     var location = document.getElementsByClassName('location')[0];
     location.innerHTML = "Location: " + mImages[mCurrentIndex].location;
@@ -128,7 +128,7 @@ window.addEventListener('load', function() {
 }, false);
 
 function  iterateJSON(){
-  for(x = 0; x < mJson; x ++)
+  for(x = 0; x < mJson.images.length; x++)
   {
     mImages[x] = new GalleryImage();
     mImages[x].location = mJson.images[x].imageLocation;
