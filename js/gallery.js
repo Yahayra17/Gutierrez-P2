@@ -41,14 +41,6 @@ function rotate(){
   }
 }
 
-$( "#nextPhoto" ).click(function() {
-	swapPhoto();
-});
-
-$( "#prevPhoto" ).click(function() {
-	mCurrentIndex -= 1;
-	swapPhoto();
-});
 
 function swapPhoto() {
 
@@ -115,6 +107,23 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 }
 
 $(document).ready( function() {
+	$("#nextPhoto").position({
+	    my: "right bottom",
+	    at: "right bottom",
+	    of: "#nav"
+	});
+	
+//Nav controls onclick handlers
+	
+	$( "#nextPhoto" ).click(function() {
+		swapPhoto();
+	});
+
+	$( "#prevPhoto" ).click(function() {
+		mCurrentIndex -= 2;
+		swapPhoto();
+	});
+	
   fetchJSON();
 	// This initially hides the photos' metadata information
  //	$('.details').eq(0).hide();
@@ -144,8 +153,4 @@ function GalleryImage() {
   var img;
 }
 
-$("#nextPhoto").position({
-    my: "right bottom",
-    at: "right bottom",
-    of: "#nav"
-});
+
